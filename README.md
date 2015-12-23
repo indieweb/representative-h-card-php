@@ -29,9 +29,10 @@ Usage
 This function accepts a PHP array in the format returned by the [microformats2 parser](https://github.com/indieweb/php-mf2).
 
 ```php
-$html = file_get_contents('http://aaronparecki.com/');
-$parsed = Mf2\parse($html);
-$representative = Mf2\HCard\representative($parsed, 'http://aaronparecki.com/');
+$url = 'http://aaronparecki.com/';
+$html = file_get_contents($url);
+$parsed = Mf2\parse($html, $url);
+$representative = Mf2\HCard\representative($parsed, $url);
 print_r($representative);
 ```
 
