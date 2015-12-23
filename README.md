@@ -1,6 +1,8 @@
 Representative H-Card Parsing
 =============================
 
+[![Build Status](https://travis-ci.org/aaronpk/representative-h-card-php.png?branch=master)](http://travis-ci.org/aaronpk/representative-h-card-php)
+
 Given a parsed mf2 document, return the [representative h-card](http://microformats.org/wiki/representative-h-card-parsing) for the page.
 
 
@@ -11,7 +13,7 @@ Install via composer:
 
 ```json
 {
-  "mf2/representative-h-card": "0.1.*"
+  "indieweb/representative-h-card": "0.1.*"
 }
 ```
 

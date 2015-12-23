@@ -1,5 +1,5 @@
 {
-  "name": "mf2/representative-h-card",
+  "name": "indieweb/representative-h-card",
   "type": "library",
   "keywords": ["indieweb", "h-card", "microformats", "mf2"],
   "license": "Apache-2.0",
