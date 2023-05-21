@@ -16,6 +16,14 @@ class RepresentativeTest extends \PHPUnit\Framework\TestCase {
     $this->assertContains('http://example.com/', $representative['properties']['url']);
   }
 
+  public function testTopLevelHCardWithURLUIDMissingPath() {
+    $html = '<div class="h-card"><a href="http://example.com" class="u-url u-uid">Example</a></div>';
+    $parsed = Mf2\parse($html);
+    $representative = Mf2\HCard\representative($parsed, 'http://example.com/');
+    $this->assertIsArray($representative);
+    $this->assertContains('http://example.com', $representative['properties']['url']);
+  }
+
   public function testTopLevelHCardURLWithRelMe() {
     $html = '<div class="h-card"><a href="http://example.com/" class="u-url" rel="me">Example</a></div>';
     $parsed = Mf2\parse($html);
