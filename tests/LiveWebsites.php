@@ -6,7 +6,7 @@
   This file is not run by default using phpunit, but you can run it manually:
   $ phpunit.phar tests/LiveWebsites.php
 */
-class LiveWebsites extends PHPUnit_Framework_TestCase {
+class LiveWebsites extends \PHPUnit\Framework\TestCase {
 
   private function parse($url) {
     return Mf2\fetch($url);
