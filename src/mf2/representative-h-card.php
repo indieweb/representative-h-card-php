@@ -95,7 +95,7 @@ function has_value($item, $property, $value) {
   if(!is_microformat($item)) return false;
   if(!array_key_exists($property, $item['properties'])) return false;
   foreach($item['properties'][$property] as $v) {
-    if($v == $value) {
+    if(urls_match($v, $value)) {
       return true;
     }
   }
@@ -107,7 +107,7 @@ function has_rel($parsed, $property, $value) {
   if(!array_key_exists('rels', $parsed)) return false;
   if(!array_key_exists($property, $parsed['rels'])) return false;
   foreach($parsed['rels'][$property] as $v) {
-    if($v == $value) {
+    if(urls_match($v, $value)) {
       return true;
     }
   }

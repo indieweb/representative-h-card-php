@@ -33,4 +33,10 @@ class LiveWebsites extends \PHPUnit\Framework\TestCase {
     $this->assertContains('http://gregorlove.com/', $representative['properties']['url']);
   }
 
+  public function testAndreasVos() {
+    $url = 'https://avris.it/';
+    $parsed = $this->parse($url);
+    $representative = Mf2\HCard\representative($parsed, $url);
+    $this->assertContains('https://avris.it/', $representative['properties']['url']);
+  }
 }
